@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Counter from './src/Counter'
+import Calcaulator from './src/Calculator.js/index.js'
 
 let root = ReactDOM.render(<App />, document.getElementById('root'));
 
@@ -25,28 +26,7 @@ const Person = ({title,name,age,img}) => {
 
 	)
 }
-const Counter =() => {
-	let [count,setState] = useState(0)
-	let handleClick = () =>{
-	setState(count + 1)
-	}
-	{
-	let handleClickMinus = () =>{
-	setState(count - 1)
-	}
-	let handleClickReset = () =>{
-	setState(0)
-	}
 
-	return (
-		<div>
-		<p>you clicked {count} times</p>
-		<button onClick={()=> console.log('clicked')}>Plus 1</button>
-		</div>
-	)
-	}
-	{
-		
 
 		
 	
