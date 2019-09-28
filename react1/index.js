@@ -2,41 +2,38 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Counter from './src/Counter'
-import Calcaulator from './src/Calculator.js/index.js'
+// import Counter from './src/Counter';
+// import Calcaulator from './src/Calculator.js/index.js';
+// import NoteApp from './NoteApp.js';
+import PhotoAlbum from './PhotoAlbum'
 
-let root = ReactDOM.render(<App />, document.getElementById('root'));
+let root = document.getElementById('root');
 
-let person = {
-	name: Person,
-	title: title
+const Calculator = () => {
+    let [display, setDisplay] = useState(0) 
+    let [inputs, setInputs] = useState(0)
+
+	let buttonClick = (num) =>{
+        return () => {
+            if (inputs === 0) {
+                setInputs(num)
+            }
+            else {
+                setInputs(inputs + num)
+            }
+
+        }
+    }
+    let execute = () => {
+        setDisplay(eval())
+
+    }
 }
 
 
-
-const Person = ({title,name,age,img}) => {
-	return (
-		<div>
-		<p>{name}</p>
-		<p>{title}</p>
-		<p>Age: {age}</p>
-		<img src={img}/>
-		</div>
-
-
-	)
-}
-
-
+    
 		
 	
 
-let attributes = {
-	title: 'title',
-	name: 'name',
-	age: '2',
-	height: '6`2',
-	weight: '0kg'
-}
 
-ReactDOM.render(<Counter/>,root)
+ReactDOM.render(<PhotoAlbum/>,root)
